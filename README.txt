@@ -6,6 +6,6 @@ This software is distributed without any warranty.
 You should have received a copy of the CC0 Public Domain Dedication along with this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 
-For more information about parsing to an Expression please read Formula\ExpressionParser\README.txt.
+For more information about parsing to an Expression please read ExpressionParser\README.txt.
 
 If you see any "Internal parser error: ..." message please send me the formula that triggered it.
