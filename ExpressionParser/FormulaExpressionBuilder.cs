@@ -59,15 +59,19 @@ namespace Formula.ExpressionParser
                         HandleNumber(ec);
                         break;
                     case 'x':
+                    case 'X':
                         SetExpression(ec, _params.X);
                         break;
                     case 'y':
+                    case 'Y':
                         SetExpression(ec, _params.Y);
                         break;
                     case 'z':
+                    case 'Z':
                         SetExpression(ec, _params.Z);
                         break;
                     case 't':
+                    case 'T':
                         SetExpression(ec, _params.T);
                         break;
                     case '+':
@@ -189,7 +193,7 @@ namespace Formula.ExpressionParser
 
         private bool ConsumeWord(string name)
         {
-            if ((_pos + name.Length) <= _input.Length && _input.Substring(_pos, name.Length) == name)
+            if ((_pos + name.Length) <= _input.Length && _input.Substring(_pos, name.Length).ToLower() == name)
             {
                 _pos += name.Length - 1;
                 return true;
