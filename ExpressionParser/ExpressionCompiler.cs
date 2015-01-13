@@ -64,10 +64,20 @@ namespace Formula.ExpressionParser
         internal Expression GetResult()
         {
             if (_operator2 != null)
+            {
+                if (_expression3 == null)
+                    return null;
+
                 ApplyOperator2(_expression3);
+            }
 
             if (_operator1 != null)
+            {
+                if (_expression2 == null)
+                    return null;
+
                 ApplyOperator1(_expression2);
+            }
 
             return _expression1;
         }
